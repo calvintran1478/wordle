@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { gameState, guessValue, WordGuess } from "./types/types";
 import { Board } from "./components/Board";
+import words from "./data/wordList.json";
 import "./styles/App.css";
 
 function getWord(): string {
-  return "apple";
+  return words[Math.floor(Math.random() * words.length)].toUpperCase();
 }
 
 function intializeWordGuesses(
